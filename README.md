@@ -94,4 +94,5 @@ Styling: Tailwind CSS with custom design tokens and animations
 State Management: Context API with custom hooks for clean separation of concerns 
 Error Handling: Comprehensive error boundaries and user feedback systems
 
-Thank you frens, YourFren
+Thank you frens, 
+YourFren
