@@ -86,7 +86,9 @@ Acknowledgments
 A huge thank you to Milarepa, Your feedback, ideas, and support have shaped this project into something truly special. 
 
 App: https://frenai.app
+
 Contact: hellofrens@frenai.app
 
 Thank you,
+
 YourFren
