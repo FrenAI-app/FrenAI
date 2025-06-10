@@ -83,6 +83,7 @@ We’ve adopted industry-standard practices to ensure a high-quality, maintainab
 * Error Handling: Comprehensive error boundaries and user-friendly feedback systems enhance reliability.
 
 Acknowledgments
+
 A huge thank you to Milarepa, Your feedback, ideas, and support have shaped this project into something truly special. 
 
 App: https://frenai.app
