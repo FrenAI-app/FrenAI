@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <!-- Enhanced mobile viewport configuration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    
+    <!-- iOS specific meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="FrenAI" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    
+    <!-- Android specific meta tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#a855f7" />
+    <meta name="msapplication-TileColor" content="#a855f7" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    
+    <!-- Prevent telephone number detection -->
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <title>FrenAI - your friendly AI companion</title>
+    <meta name="description" content="FrenAI - your friendly AI companion optimized for mobile devices" />
+    <meta name="author" content="Lovable" />
+
+    <meta property="og:title" content="FrenAI - your friendly AI companion" />
+    <meta property="og:description" content="FrenAI - your friendly AI companion optimized for mobile devices" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Favicon and app icons -->
+    <link rel="icon" href="/lovable-uploads/ef81092e-a30e-4954-8f1f-75de0119e44a.png" type="image/png">
+    <link rel="apple-touch-icon" href="/lovable-uploads/ef81092e-a30e-4954-8f1f-75de0119e44a.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/lovable-uploads/ef81092e-a30e-4954-8f1f-75de0119e44a.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/lovable-uploads/ef81092e-a30e-4954-8f1f-75de0119e44a.png" />
+    
+    <!-- Preload critical fonts for performance -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Poppins:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Poppins:wght@400;700&display=swap"></noscript>
+    
+    <!-- Performance optimization for mobile -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdn.gpteng.co">
+    
+    <!-- iOS splash screens -->
+    <link rel="apple-touch-startup-image" href="/lovable-uploads/ef81092e-a30e-4954-8f1f-75de0119e44a.png" />
+    
+    <!-- Performance and accessibility -->
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    
+    <!-- Mobile optimization CSS variables -->
+    <style>
+      :root {
+        --vh: 1vh;
+        --viewport-height: 100vh;
+        --safe-area-inset-top: 0px;
+        --safe-area-inset-bottom: 0px;
+        --safe-area-inset-left: 0px;
+        --safe-area-inset-right: 0px;
+      }
+      
+      /* Prevent zoom on iOS when focusing inputs */
+      @media screen and (max-width: 768px) {
+        input, textarea, select {
+          font-size: 16px !important;
+        }
+      }
+      
+      /* Optimize rendering for mobile */
+      html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
+      
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        overscroll-behavior: none;
+      }
+      
+      /* Hide browser UI elements on mobile */
+      .mobile-fullscreen {
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+      }
+    </style>
+  </head>
+
+  <body class="mobile-fullscreen">
+    <div id="root"></div>
+    
+    <!-- IMPORTANT: Required script for Lovable functionality -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Enhanced Phantom Wallet Detection for Mobile -->
+    <script>
+      // Mobile-optimized wallet detection
+      const detectMobileWallet = () => {
+        const isPhantomInstalled = window.phantom?.solana?.isPhantom || window.solana?.isPhantom;
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        if (!isPhantomInstalled && isMobile) {
+          console.log('Mobile device detected. Phantom wallet will open in mobile app when connecting.');
+        } else if (!isPhantomInstalled) {
+          console.log('Phantom wallet is not installed. Users will be prompted to install it when trying to connect.');
+        }
+        
+        return { isPhantomInstalled, isMobile };
+      };
+      
+      // Initialize mobile optimizations
+      const initMobileOptimizations = () => {
+        // Set initial viewport height
+        const setVH = () => {
+          const vh = window.innerHeight * 0.01;
+          document.documentElement.style.setProperty('--vh', `${vh}px`);
+        };
+        
+        setVH();
+        window.addEventListener('resize', setVH);
+        window.addEventListener('orientationchange', () => setTimeout(setVH, 100));
+        
+        // Detect and handle mobile browsers
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        const isChrome = /chrome/i.test(navigator.userAgent);
+        const isFirefox = /firefox/i.test(navigator.userAgent);
+        
+        if (isSafari) {
+          document.body.classList.add('is-safari');
+        }
+        if (isChrome) {
+          document.body.classList.add('is-chrome');
+        }
+        if (isFirefox) {
+          document.body.classList.add('is-firefox');
+        }
+        
+        // Handle iOS-specific optimizations
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+          document.body.classList.add('is-ios-device');
+          
+          // Prevent zoom on double tap
+          let lastTouchEnd = 0;
+          document.addEventListener('touchend', (event) => {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+              event.preventDefault();
+            }
+            lastTouchEnd = now;
+          }, { passive: false });
+        }
+        
+        // Handle Android-specific optimizations
+        if (/Android/.test(navigator.userAgent)) {
+          document.body.classList.add('is-android-device');
+        }
+      };
+      
+      // Initialize when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+          detectMobileWallet();
+          initMobileOptimizations();
+        });
+      } else {
+        detectMobileWallet();
+        initMobileOptimizations();
+      }
+    </script>
+  </body>
+</html>

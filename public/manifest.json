@@ -1,0 +1,72 @@
+
+{
+  "name": "FrenAI - Your Friendly AI Companion",
+  "short_name": "FrenAI",
+  "description": "FrenAI - your friendly AI companion optimized for mobile devices",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#a855f7",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["productivity", "social", "entertainment"],
+  "icons": [
+    {
+      "src": "/lovable-uploads/ef81092e-a30e-4954-8f1f-75de0119e44a.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/lovable-uploads/ef81092e-a30e-4954-8f1f-75de0119e44a.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/lovable-uploads/ef81092e-a30e-4954-8f1f-75de0119e44a.png",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/lovable-uploads/ef81092e-a30e-4954-8f1f-75de0119e44a.png",
+      "type": "image/png",
+      "sizes": "750x1334",
+      "form_factor": "narrow"
+    }
+  ],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Start Chat",
+      "short_name": "Chat",
+      "description": "Start a new conversation with FrenAI",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/lovable-uploads/ef81092e-a30e-4954-8f1f-75de0119e44a.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+frenai",
+      "url": "/?handler=%s"
+    }
+  ]
+}

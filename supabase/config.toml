@@ -1,0 +1,32 @@
+
+project_id = "lxzbzyisnificdwtzddc"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage"]
+
+[db]
+port = 54322
+
+[realtime]
+enabled = true
+
+[studio]
+enabled = true
+port = 54323
+
+[inbucket]
+enabled = true
+port = 54324
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+
+[storage]
+enabled = true
+
+[edge-functions]
+[edge-functions.sentiment-analysis]
+verify_jwt = false
