@@ -59,7 +59,6 @@ Authentication & Security
 Security is a top priority, and we’ve implemented robust measures to protect user data and ensure a trustworthy experience.
 * Multi-Provider Authentication:
     * Web3 Wallets: Integrated via Privy for seamless Ethereum and Solana wallet connectivity.
-    * OAuth: Google login for quick and secure access.
     * Email/Password: Traditional login with encrypted credentials.
 * Database Security:
     * Row Level Security (RLS) ensures users only access their own data.
