@@ -23,7 +23,7 @@ The backend leverages Supabase, a powerful Backend-as-a-Service platform, to han
 * Database: A PostgreSQL database with Row Level Security (RLS) policies ensures fine-grained access control, isolating user data for maximum security.
 * Real-time Subscriptions: Supabase’s real-time capabilities power features like live chat, enabling instant updates for typing indicators and user presence.
 * Edge Functions: Serverless Edge Functions provide lightweight API endpoints for custom logic, ensuring low-latency responses and scalability.
-* Authentication: Multi-provider authentication supports Web3 wallets (via Privy for Ethereum/Solana), OAuth (Google), and traditional email/password login, catering to diverse user preferences.
+* Authentication: Multi-provider authentication supports Web3 wallets (via Privy for Ethereum/Solana), and traditional email/password login, catering to diverse user preferences.
 
 AI Integration: Multi-Model Approach
 
