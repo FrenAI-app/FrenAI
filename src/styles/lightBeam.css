@@ -1,0 +1,36 @@
+
+/* Light beam animations */
+@keyframes lightBeamFall {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Particle animations */
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+  100% { transform: translateY(0) rotate(360deg); }
+}
+
+/* Duck spotlight effect */
+.duck-spotlight {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 150, 0.9));
+  animation: spotlight 3s ease-in-out;
+}
+
+@keyframes spotlight {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 150, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(255, 255, 150, 0.9));
+  }
+}
