@@ -1,3 +1,11 @@
+#FrenAI - Your Friendly AI Companion
+  [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+  [![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+</div>
+
 Hello frens, FrenAI is a web application that combines conversational AI with emotional intelligence to create personalized AI companions. Built with a robust tech stack and designed for scalability, it demonstrates advanced patterns in real-time communication, user learning, and Web3 integration.
 
 Designed for scalability and performance, it combines a sleek React frontend, a robust Supabase backend, and advanced AI integrations to create a dynamic environment for learning and interaction. Below, we dive into the architecture, features, and development practices that make this project shine. Whether you’re a developer, contributor, or curious learner, we’re excited to share this journey with you!
@@ -81,6 +89,44 @@ We’ve adopted industry-standard practices to ensure a high-quality, maintainab
 * Styling: Tailwind CSS with custom design tokens and animations ensures a cohesive look and feel.
 * State Management: Context API with custom hooks separates concerns for clean architecture.
 * Error Handling: Comprehensive error boundaries and user-friendly feedback systems enhance reliability.
+
+Project Structure
+
+src/
+├── components/           # Reusable UI components
+│   ├── ui/              # Shadcn/UI components
+│   ├── auth/            # Authentication components
+│   ├── avatar/          # Avatar generation system
+│   ├── duck/            # Duck mascot components
+│   └── fren-token/      # Token-related components
+├── context/             # React Context providers
+│   ├── ChatContext.tsx  # Chat state management
+│   ├── UserContext.tsx  # User profile management
+│   └── PrivyContext.tsx # Web3 authentication
+├── hooks/               # Custom React hooks
+├── lib/                 # Utility libraries
+│   ├── supabaseClient.ts    # Database client
+│   ├── aiMemoryBank.ts      # AI learning system
+│   ├── conversationStorage.ts # Chat persistence
+│   └── sentimentAnalysis.ts  # Mood detection
+├── pages/               # Main application pages
+├── integrations/        # External service integrations
+└── types/               # TypeScript type definitions
+
+supabase/
+├── functions/           # Edge Functions
+│   ├── chat/           # AI chat endpoint
+│   ├── speech-to-text/ # Audio transcription
+│   ├── text-to-speech/ # Voice synthesis
+│   └── sentiment-analysis/ # Mood analysis
+└── config.toml         # Supabase configuration
+
+Development Guidelines
+* Use TypeScript for all new code
+* Follow React best practices and hooks patterns
+* Maintain responsive design principles
+* Write meaningful commit messages
+* Update documentation for new features
 
 Acknowledgments
 
