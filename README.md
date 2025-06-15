@@ -93,37 +93,6 @@ We’ve adopted industry-standard practices to ensure a high-quality, maintainab
 * State Management: Context API with custom hooks separates concerns for clean architecture.
 * Error Handling: Comprehensive error boundaries and user-friendly feedback systems enhance reliability.
 
-Project Structure
-
-src/
-├── components/           # Reusable UI components
-│   ├── ui/              # Shadcn/UI components
-│   ├── auth/            # Authentication components
-│   ├── avatar/          # Avatar generation system
-│   ├── duck/            # Duck mascot components
-│   └── fren-token/      # Token-related components
-├── context/             # React Context providers
-│   ├── ChatContext.tsx  # Chat state management
-│   ├── UserContext.tsx  # User profile management
-│   └── PrivyContext.tsx # Web3 authentication
-├── hooks/               # Custom React hooks
-├── lib/                 # Utility libraries
-│   ├── supabaseClient.ts    # Database client
-│   ├── aiMemoryBank.ts      # AI learning system
-│   ├── conversationStorage.ts # Chat persistence
-│   └── sentimentAnalysis.ts  # Mood detection
-├── pages/               # Main application pages
-├── integrations/        # External service integrations
-└── types/               # TypeScript type definitions
-
-supabase/
-├── functions/           # Edge Functions
-│   ├── chat/           # AI chat endpoint
-│   ├── speech-to-text/ # Audio transcription
-│   ├── text-to-speech/ # Voice synthesis
-│   └── sentiment-analysis/ # Mood analysis
-└── config.toml         # Supabase configuration
-
 Development Guidelines
 * Use TypeScript for all new code
 * Follow React best practices and hooks patterns
