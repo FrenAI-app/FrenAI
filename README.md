@@ -30,6 +30,7 @@ AI is at the heart of our platform, enhancing user interactions with intelligent
 * Real-time Mood Detection: The system tracks user emotions and adapts responses in real time, creating a personalized and supportive interaction flow.
 
 Smart Learning System
+
 Our AI memory bank is the core of the platform’s learning capabilities, enabling it to grow smarter with every interaction. The system stores and processes user data using a structured format:
 interface AIMemory {
   memory_type: 'personal' | 'preference' | 'fact' | 'relationship';
@@ -37,6 +38,7 @@ interface AIMemory {
   memory_value: any;
   importance_score: number;
 }
+
 Key Learning Features
 * Conversation Pattern Analysis: The AI adapts its communication style based on user preferences, ensuring a natural and engaging dialogue.
 * Mood Tracking: By learning emotional patterns, the system provides tailored responses to support the user’s emotional state.
